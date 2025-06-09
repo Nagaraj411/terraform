@@ -44,6 +44,6 @@ variable "sg_tags" {
 }
 
 variable "environment" {
-    default = "dev" # if dev is using in instance is takes "t3.micro" other then that like prod it will take "t3.small"
+    default = "dev" # if dev is using in ec2 instance is takes "t3.micro" other then that like prod it will take "t3.small"
   
 }

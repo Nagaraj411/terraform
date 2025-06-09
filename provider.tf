@@ -1,3 +1,4 @@
+# This is a Terraform version script
 terraform {
   required_providers {
     aws = {

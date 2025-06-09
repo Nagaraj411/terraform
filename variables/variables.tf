@@ -5,14 +5,40 @@ variable "ami_id" {
 }
 
 variable "instance_type" {
-  default = "t3.micro"
+    default = "t3.micro"
 }
 
 variable "ec2_tags" {
     type = map(string)
     default = {
-        Name = " Terraform main "
+        Name = " Terraform main " # Captain N mainsion chestene Terraform main ani name vashudi
         Purpose = " Checking "
     }
   
+}
+
+variable "sg_name" {
+    default = "allow-all"
+}
+
+variable "sg_description" {
+    default = "allowing all ports from internet"
+}
+
+variable "from_port" {
+    default = 0
+}
+
+variable "to_port" {
+    default = 0
+}
+
+variable "cidr_blocks" {
+    default = ["0.0.0.0/0"]
+}
+
+variable "sg_tags" {
+    default = {
+        Name = "allow-all"
+    }
 }

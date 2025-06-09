@@ -7,3 +7,12 @@ variable "ami_id" {
 variable "instance_type" {
   default = "t3.micro"
 }
+
+variable "ec2_tags" {
+    type = map(string)
+    default = {
+        name = " Terramform main "
+        Purpose = " Checking "
+    }
+  
+}

@@ -1,3 +1,4 @@
+# This script will run security Group inbound rules & ourbound rules
 resource "aws_security_group" "allow_all" {
     name        = "allow_all"
     description = "allow all traffic"

@@ -1,7 +1,8 @@
 # This script will run instance & security Group inbound rules & ourbound rules 
 resource "aws_instance" "roboshop" {
   ami           = var.ami_id  # left & right side no need to same right side we can change (left side is syntax to need to change)
-  instance_type = var.instance_type
+  instance_type = var.environment == "dev" ? "t3.micro" : "t3.small" # this is the syntax of condition
+  # line 4 command dev is ture it take "t3.micro" & its false it take "t3.small" 
   vpc_security_group_ids = [ aws_security_group.allow_all.id ]
   
   tags = var.ec2_tags

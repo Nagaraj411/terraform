@@ -42,3 +42,8 @@ variable "sg_tags" {
         Name = "allow-all"
     }
 }
+
+variable "environment" {
+    default = "dev" # if dev is using in instance is takes "t3.micro" other then that like prod it will take "t3.small"
+  
+}

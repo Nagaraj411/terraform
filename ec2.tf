@@ -1,6 +1,6 @@
 # This script will run security Group inbound rules & ourbound rules
 resource "aws_security_group" "allow_all" {
-    name        = "allow_all"
+    name        = "allow_all (New)"
     description = "allow all traffic"
 
     ingress {
@@ -19,6 +19,6 @@ resource "aws_security_group" "allow_all" {
     }
 
     tags = {
-        Name = "allow-all"
+        Name = "allow-all (New)"
     }
 }

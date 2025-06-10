@@ -6,3 +6,6 @@ resource "aws_route53_record" "www" {
   ttl     = 1
   records = [each.value.private_ip]
 }
+
+# count must useful to [list]
+# for must useful to [set & map]

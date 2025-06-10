@@ -49,12 +49,14 @@ variable "environment" {
 }
 
 variable "instances" {
-    default = {  # This for loop map format get keyword assigned for each.key for each.value
-        mongodb = "t3.micro"
-        redis = "t3.micro"
-        mysql = "t3.micro"
-        rabbitmq = "t3.micro"
-    }
+    # default = {  # This for loop map format get keyword assigned for each.key for each.value
+    #     mongodb = "t3.micro"
+    #     redis = "t3.micro"
+    #     mysql = "t3.micro"
+    #     rabbitmq = "t3.micro"
+    # }
+    default = ["mongodb" , "redis" , "mysql" , "rabbitmq"] 
+    # list lone vunchali ante if want to use for_each ante (toset) laga convert cheyali use cheyali ot tomap ga aina use cheyali
   
 }
 

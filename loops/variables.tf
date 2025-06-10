@@ -52,3 +52,11 @@ variable "instances" {
     default = ["mongodb" , "redis" , "mysql" , "rabbitmq"]
   
 }
+
+variable "zone_id" {
+    default = "Z05005862BAG0R5BQ5WUP"
+}
+
+variable "domain_name" {
+    default = "devops84.shop"
+}

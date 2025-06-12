@@ -1,8 +1,8 @@
-# This script will run instance & security Group inbound rules & ourbound rules 
+# This script will run to stored data in S3 EC2 aws site
 resource "aws_instance" "roboshop" {
-  count         = 4                                                  # This count = 4 line will create 4 instances at a time using loop concepts
-  ami           = var.ami_id                                         # left & right side no need to same right side we can change (left side is syntax to need to change)
-  instance_type = var.environment == "dev" ? "t3.micro" : "t3.small" # this is the syntax of condition
+  count         = 2                                               
+  ami           = var.ami_id                                     
+  instance_type = var.environment == "dev" ? "t3.micro" : "t3.small" 
   # line 4 command dev is ture it take "t3.micro" & its false it take "t3.small" 
   vpc_security_group_ids = [aws_security_group.allow_all.id]
 

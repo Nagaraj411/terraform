@@ -1,8 +1,8 @@
-# This Daata-sources can create the dynamic changes in AMI to create EC2 Instance
+# This Data-sources can create the dynamic changes in AMI to create EC2 Instance
 data "aws_ami" "joindevops" {
+  most_recent = true
   owners      = ["973714476881"]
-  most_recent = true # latest version lo crate chestudi ee command
-
+  
   filter {
     name   = "name"
     values = ["RHEL-9-DevOps-Practice"]

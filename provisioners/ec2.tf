@@ -1,5 +1,5 @@
 # This script will run to stored data in S3 EC2 aws site
-resource "aws_instance" "roboshop" {
+resource "aws_instance" "nginx" {
   ami                    = var.ami_id
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.allow_all.id]
@@ -34,7 +34,7 @@ resource "aws_instance" "roboshop" {
 
   provisioner "remote-exec" {
     when = destroy
-    inline = [
+    inline = [ 
       "sudo systemctl stop nginx"
     ]
 

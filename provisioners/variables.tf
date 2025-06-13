@@ -11,7 +11,7 @@ variable "instance_type" {
 variable "ec2_tags" {
   type = map(string)
   default = {
-    Name    = " RoboShop " # Captain N mainsion chestene Terraform main ani name vashudi
+    Name    = " nginx " # Captain N mainsion chestene Terraform main ani name vashudi
     Purpose = " Checking "
   }
 

@@ -1,6 +1,6 @@
 resource "aws_instance" "roboshop" {
   # for_each = var.instances
-  for_each = toset(var.instances) 
+  for_each = toset(var.instances) # for_each is used to create multiple resources based on a map or set.
    # list lone vunchali ante if want to use for_each ante (toset) laga convert cheyali use cheyali ot tomap ga aina use cheyali
 
   ami           = var.ami_id  # left & right side no need to same right side we can change (left side is syntax to need to change)

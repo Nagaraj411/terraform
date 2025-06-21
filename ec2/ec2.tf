@@ -2,10 +2,10 @@
 resource "aws_instance" "roboshop" {
   ami           = "ami-09c813fb71547fc4f"
   instance_type = "t3.micro"
-  vpc_security_group_ids = [ aws_security_group.allow_all.id ]
+  vpc_security_group_ids = [ aws_security_group.allow_all.id ] # Security Group ID
   
-  tags = {
-    Name = "Terraform main"
+  tags = { # Tags for the instance
+    Name = "Terraform main" # Name of the instance
   }
 }
 resource "aws_security_group" "allow_all" {

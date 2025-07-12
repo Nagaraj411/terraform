@@ -7,7 +7,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket       = "devops-84s"
+    bucket       = "secure-state-test"
     key          = "secure-state"
     region       = "us-east-1"
     encrypt      = true
